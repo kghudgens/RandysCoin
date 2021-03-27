@@ -2,7 +2,7 @@
 
 # Randy's Coin
 
-Full stack web application created with the django framework.
+Full stack web application created with the Django framework.
 
 A web application that connects to the crypto market and gives real time prices for some of the major crypto currencies out today. 
 
