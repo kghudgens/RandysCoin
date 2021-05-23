@@ -2,23 +2,12 @@
 {%load static%}
 
 {%block content%}
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
-      <div>
-        <h3 class="float-md-start mb-0">Randys Coin</h3>
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Contact</a>
-        </nav>
-      </div>
-    </header>
   
     <main class="px-3">
       <h1>Like a big ... Cranberry</h1>
       <p class="lead">An old friend of mine likes Crypto so we are here</p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-primary">View Cryptos</a>
+        <a href="{%url 'cryptos'%}" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-primary">View Cryptos</a>
       </p>
     </main>
   
