@@ -4,9 +4,11 @@
 
 <div class="container">
 
-    {%for coin in response%}
-    {{coin.id}}
+    {%for coin in response|slice:":10"%}
+    Name : {{coin.name}}
+    Symbol : {{coin.symbol}}
+    priceUsd: {{coin.priceUsd}}
     {%endfor%}
-    
+
 </div>
 {%endblock content%}
