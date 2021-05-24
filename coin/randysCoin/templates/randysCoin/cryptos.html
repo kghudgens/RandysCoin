@@ -2,12 +2,18 @@
 
 {%block content%}
 
-<div class="container">
+    <div class="container card-columns">
 
     {%for coin in response|slice:":10"%}
-    Name : {{coin.name}}
-    Symbol : {{coin.symbol}}
-    priceUsd: {{coin.priceUsd}}
+
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header text-dark">{{coin.symbol}}</div>
+        <div class="card-body text-dark">
+          <h5 class="card-title">{{coin.name}}</h5>
+          <p class="card-text">{{coin.priceUsd}}</p>
+        </div>
+      </div>
+    
     {%endfor%}
 
 </div>
