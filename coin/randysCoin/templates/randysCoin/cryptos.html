@@ -1,4 +1,12 @@
 {%extends "randysCoin/base.html"%}
 
 {%block content%}
+
+<div class="container">
+
+    {%for coin in response%}
+    {{coin.id}}
+    {%endfor%}
+    
+</div>
 {%endblock content%}
