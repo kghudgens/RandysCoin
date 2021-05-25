@@ -1,0 +1,25 @@
+/* "css.lint.unknownAtRules": "ignore" */
+
+/* .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  } */
+
+  /* TODO: add styling that makes the cards lay side by side */
+  /* Create three equal columns that floats next to each other */
+.float-container {
+/* padding: 20px; */
+}
+
+.float-child{
+  width: 50%;
+  float: left;
+  padding: 20px;
+
+}
+
+
