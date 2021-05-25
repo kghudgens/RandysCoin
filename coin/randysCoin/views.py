@@ -12,3 +12,7 @@ def cryptos(request):
     response = requests.get("https://api.coincap.io/v2/assets").json()
     response = response["data"]
     return render(request, "randysCoin/cryptos.html", {"response": response})
+
+
+def search(request):
+    return render(request, "randysCoin/search.html")
