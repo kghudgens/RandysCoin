@@ -1,29 +1,31 @@
 {%extends "randysCoin/base.html"%}
 
 {%block content%}
-<div class="container">
-    <main class="px-3">
-        <h1> Randy owns some of these currencies... cool right </h1>
-        <p class="lead">Lets look at some details</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-primary">View Specific Crypto</a>
-        </p>
-      </main>
-</div>
 
-    <div class="container card-columns">
+    <div class="container">
+        <main class="px-3">
+            <h1> Randy owns some of these currencies... cool right </h1>
+            <p class="lead">Lets look at some details</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-primary">View Specific Crypto</a>
+            </p>
+          </main>
+    </div>
 
-    {%for coin in response|slice:":10"%}
+    <div class="container float-container">
 
-      <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header text-dark">{{coin.symbol}}</div>
-        <div class="card-body text-dark">
-          <h5 class="card-title">{{coin.name}}</h5>
-          <p class="card-text">{{coin.priceUsd}}</p>
-        </div>
-      </div>
-    
+    {%for coin in response|slice:":12"%}
+          <div class="card border-dark mb-3 float-child" style="max-width: 18rem;">
+            <div class="card-header text-dark">
+                  {{coin.symbol}}
+            </div>
+            <div class="card-body text-dark">
+                  <h5 class="card-title">{{coin.name}}</h5>
+                  <p class="card-text">{{coin.priceUsd}}</p>
+            </div>
+          </div>
     {%endfor%}
 
-</div>
+    </div>
+
 {%endblock content%}
