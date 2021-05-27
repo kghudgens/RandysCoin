@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .forms import SearchForm
 
 import requests
 
@@ -15,4 +15,16 @@ def cryptos(request):
 
 
 def search(request):
-    return render(request, "randysCoin/search.html")
+    if request.method == "GET":
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            ID = form.cleaned_data["currency"]
+            query = {["data"]: {ID}}
+            response = requests.get("https://api.coincap.io/v2/assets/" + ID).json()
+            response = response
+            return
+    else:
+        form = SearchForm()
+    return render(
+        request, "randysCoin/search.html", {"form": form, "response": response}
+    )
