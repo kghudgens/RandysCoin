@@ -9,9 +9,10 @@
 </div>
 <!-- Form here -->
 <div class=" w-25 container input-group rounded">
-  <form type="get" action="." style="margin: 0">
-    <input  id="search_box" type="text" name="search_box"  placeholder="Search..." >
-    <button class="btn btn-light" id="search_submit" type="submit" >Submit</button>
+  <form type="get" method="GET">
+    {%csrf_token%}
+    {{form}}
+    <button class="btn btn-light btn-sm" id="search_submit" type="submit" >Submit</button>
 </form>
 </div>
 
