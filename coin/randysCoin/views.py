@@ -23,10 +23,9 @@ def search(request):
         if form.is_valid():
             ID = form.cleaned_data["currency"]
             response = requests.get("https://api.coincap.io/v2/assets/" + ID).json()
-            # ! data key is incorrect
             response = response["data"]
             return render(
-                request, "randysCoin/search", {"form": form, "response": response}
+                request, "randysCoin/search.html", {"form": form, "response": response}
             )
     else:
         form = SearchForm()
