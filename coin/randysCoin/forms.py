@@ -1,12 +1,13 @@
 from django import forms
+from django.forms import ModelForm
+from .models import Contact
 
 
 class SearchForm(forms.Form):
     currency = forms.CharField(max_length=20)
 
 
-class ContactForm(forms.Form):
-    first_name = forms.CharField(max_length=50)
-    last_name = forms.CharField(max_length=50)
-    email = forms.EmailField()
-    subject = forms.TextInput()
+class ContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields = ["first_name", "last_name", "email", "subject"]
