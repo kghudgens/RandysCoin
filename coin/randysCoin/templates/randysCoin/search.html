@@ -4,7 +4,7 @@
 <div class="container">
     <main class="px-3">
     <p class="lead">Wow, just amazing, Randy was inquistive too</p>
-     <p class="lead">Type in the ID of the currency you are looking please for a detailed breakdown</p>   
+     <p class="lead">Type in the name of the currency you are looking please for a detailed breakdown</p>   
   </main>
 </div>
 <!-- Form here -->
@@ -23,20 +23,14 @@
       <div class="card bg-dark">
         <div class="card-body">
           <p class="text-white"> Price : ${{response.priceUsd|slice:":8"}}</p>
+          <p class="text-white">Supply : {{response.supply|slice:":8"}}</p>
+          <p class="text-white">Max Supply : {{response.maxSupply|slice:":8"}}</p>
+          <p class="text-white">Market Cap : {{response.marketCapUsd|slice:":15"}}</p>
+          <p class="text-white">Volume : {{response.volumeUsd24Hr|slice:":15"}}</p>
+
         </div>
       </div>
-
     </main>
-  
-
- 
-  
-  
-  {{response.supply}}
-  {{response.maxSupply}}
-  {{response.marketCapUsd}}
-  {{response.vwap24Hr}}
-  {{response.volumeUsd24Hr}}
 </div>
 
 
