@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import SearchForm
+from .forms import SearchForm, ContactForm
 
 import requests
 
@@ -41,4 +41,13 @@ def search(request):
 
 
 def contact(request):
+    """View for the contact page"""
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Put in logic for posting to database and sending email if contact form is submitted
+            None
+    else:
+        form = ContactForm()
     return render(request, "randysCoin/contact.html")
