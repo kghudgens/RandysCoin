@@ -38,3 +38,7 @@ def search(request):
     else:
         form = SearchForm()
     return render(request, "randysCoin/search.html", {"form": form})
+
+
+def contact(request):
+    return render(request, "randysCoin/contact.html")
