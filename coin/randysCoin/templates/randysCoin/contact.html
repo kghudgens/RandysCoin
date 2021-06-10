@@ -2,6 +2,14 @@
 {% load crispy_forms_tags %}
 
 {%block content%}
+<div class="w-50 container">
+    <form method="POST">
+    {%csrf_token%}
+    {{form|crispy}}
+    <input type="submit" value="Submit">
+    </form>
+</div>
+
 
 
 {%endblock content%}
