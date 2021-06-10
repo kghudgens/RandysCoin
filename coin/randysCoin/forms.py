@@ -4,7 +4,7 @@ from .models import Contact
 
 
 class SearchForm(forms.Form):
-    currency = forms.CharField(max_length=20)
+    currency = forms.CharField(max_length=20, required=False)
 
 
 class ContactForm(ModelForm):
