@@ -59,7 +59,7 @@ def contact(request):
                 ["hudgens1073@gmail.com"],
                 fail_silently=False,
             )
-            None
+            return render(request, "randysCoin/contact.html", {"form": form})
     else:
         form = ContactForm()
-    return render(request, "randysCoin/contact.html")
+    return render(request, "randysCoin/contact.html", {"form": form})
