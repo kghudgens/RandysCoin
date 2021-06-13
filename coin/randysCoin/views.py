@@ -49,13 +49,11 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            full_name = form.cleaned_data["first_name"] + form.cleaned_data["last_name"]
-            email = form.cleaned_data["email"]
-            message = form.cleaned_data["subject"]
+            cf = form.cleaned_data
             send_mail(
                 "Randy's Coin Contact",
-                message,
-                email,
+                cf["subject"],
+                cf["email"],
                 ["hudgens1073@gmail.com"],
                 fail_silently=False,
             )
